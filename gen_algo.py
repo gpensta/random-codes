@@ -1,3 +1,4 @@
+from ctypes import sizeof
 import numpy as np
 import matplotlib.pyplot as plt
 
@@ -41,10 +42,10 @@ def sort_pop(pop):
 
 if __name__=='__main__':
     
-    population_size = 10000
+    population_size = 20000
     perf = []
     n_iter = 100
-    keyword = "vieilabricotiermediteraneendesanremoauxfruitsdelicieux"
+    keyword = "vieilabricotiermediteraneendeperpignanauxfruitsdelicieuxetalodeursavoureuse"
     keyword_size = len(keyword)
     pop = gen_pop(population_size, keyword_size)
     
@@ -71,6 +72,8 @@ if __name__=='__main__':
 
     print("Num iter: ", i)
     print("Keyword found is : ", sorted_pop[-1])
+    print(f"Number of operations : {i*population_size:1e}")
+    print(f"Naive requires : {26**keyword_size:1e}")
 
     plt.figure()
     plt.title("Performance")
