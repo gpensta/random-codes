@@ -81,3 +81,4 @@ if __name__=='__main__':
     plt.ylabel("score")
     plt.plot(perf)
     plt.savefig("perf.png")
+    
