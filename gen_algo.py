@@ -52,13 +52,13 @@ if __name__=='__main__':
     perf = []
     n_iter = 100
     keyword = "vieilabricotiermediteraneendesanremoauxfruitsdelicieux"
-    S = len(keyword)
-    pop = gen_pop(population_size, S)
+    keyword_size = len(keyword)
+    pop = gen_pop(population_size, keyword_size)
     
     for i in range(n_iter):
         sorted_pop = sort_pop(pop)
         perf.append(sorted_pop[-1][1])
-        if sorted_pop[-1][1] == S:
+        if sorted_pop[-1][1] == keyword_size:
             break
         pop = []
 
