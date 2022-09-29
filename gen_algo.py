@@ -28,7 +28,7 @@ def crossover(i1, i2, num=1):
 def mutation(i, num=1):
     for n in range(num):
         pos = np.random.randint(0, len(i))
-        i[pos] = chr(np.random.randint(97, 104))
+        i[pos] = chr(np.random.randint(97, 124))
     return i
 
 def choose(pop):
@@ -50,8 +50,8 @@ if __name__=='__main__':
     
     N = 10000
     perf = []
-    n_iter = 20
-    keyword = "vieilabricotiermediteraneen"
+    n_iter = 60
+    keyword = "vieilabricotiermediteraneendesanremoauxfruitsdelicieux"
     S = len(keyword)
     pop = gen_pop(N, S)
     for i in range(n_iter):
