@@ -31,13 +31,6 @@ def mutation(i, num=1):
         i[pos] = chr(np.random.randint(97, 124))
     return i
 
-def choose(pop):
-    dis = []
-    for ind in pop:
-        fit = fitness(ind)
-        for f in range(fit):
-            dis.append()
-
 def sort_pop(pop):
     scored_pop = []
     for i in pop:
